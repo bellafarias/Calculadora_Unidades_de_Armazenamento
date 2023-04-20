@@ -48,3 +48,18 @@ entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser converti
 valorConvertido = megabyte_para_kilobyte (entradaDotecladoValoraSerConvertido)
 print("Valor Convertido:", valorConvertido)
 
+def megabyte_para_gigabyte(valorASerConvertido):
+    MBparaGB= valorASerConvertido / (CONSTANTE_PRINCIPAL)
+    return MBparaGB
+
+def gigabyte_para_megabyte(valorASerConvertido):
+    GBparaMB = valorASerConvertido * (CONSTANTE_PRINCIPAL)
+    return GBparaMB
+
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Megabyte para Gigabyte:"))
+valorConvertido = megabyte_para_gigabyte (entradaDotecladoValoraSerConvertido)
+print("Valor Convertido:", valorConvertido)
+
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Gigabyte para Megabyte:"))
+valorConvertido = gigabyte_para_megabyte(entradaDotecladoValoraSerConvertido)
+print("Valor Convertido:", valorConvertido)
