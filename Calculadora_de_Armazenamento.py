@@ -1,19 +1,35 @@
 def bit_para_byte(valorASerConvertido):
-    print('Valor convertido de bit para bytes')
     bytesCalculado = valorASerConvertido / 8
     return bytesCalculado
 
 def byte_para_bit(valorASerConvertido):
-    print('Valor convertido de byte para bit')
     bitsCalculado = valorASerConvertido * 8
     return bitsCalculado
 
-print('Insira o valor a ser convertido de bit para byte:')
-entradaDotecladoValoraSerConvertido = float(input())
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de bit para byte:"))
 valorConvertido = bit_para_byte(entradaDotecladoValoraSerConvertido)
-print(valorConvertido)
+print("Valor Convertido:", valorConvertido)
 
-print('Insira o valor a ser convertido de byte para bit:')
-entradaDotecladoValoraSerConvertido = float(input())
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de byte para bit:"))
 valorConvertido = byte_para_bit (entradaDotecladoValoraSerConvertido)
-print(valorConvertido)
+print("Valor Convertido:", valorConvertido)
+
+CONSTANTE_PRINCIPAL = 1024
+
+def byte_para_kilobyte(valorASerConvertido):
+    BytesParaKbyte = valorASerConvertido / (CONSTANTE_PRINCIPAL)
+    return BytesParaKbyte
+
+def kilobyte_para_byte(valorASerConvertido):
+    kbyteParaBytes = valorASerConvertido * (CONSTANTE_PRINCIPAL)
+    return kbyteParaBytes
+
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Byte para Kilobyte:"))
+valorConvertido = byte_para_kilobyte (entradaDotecladoValoraSerConvertido)
+print("Valor Convertido:", valorConvertido)
+
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Kilobyte para Byte:"))
+valorConvertido = kilobyte_para_byte(entradaDotecladoValoraSerConvertido)
+print("Valor Convertido:", valorConvertido)
+
+
