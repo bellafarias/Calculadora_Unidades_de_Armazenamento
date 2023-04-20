@@ -72,10 +72,10 @@ def terabyte_para_gigabyte(valorASerConvertido):
     TBparaGB = valorASerConvertido * (CONSTANTE_PRINCIPAL)
     return TBparaGB
 
-entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de gigabyte para terabyte:"))
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Gigabyte para Terabyte:"))
 valorConvertido = gigabyte_para_Terabyte (entradaDotecladoValoraSerConvertido)
 print("Valor Convertido:", valorConvertido)
 
-entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de terabyte para gigabyte:"))
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Terabyte para Gigabyte:"))
 valorConvertido = terabyte_para_gigabyte(entradaDotecladoValoraSerConvertido)
 print("Valor Convertido:", valorConvertido)
