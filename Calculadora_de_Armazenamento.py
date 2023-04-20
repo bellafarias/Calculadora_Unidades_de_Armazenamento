@@ -79,3 +79,19 @@ print("Valor Convertido:", valorConvertido)
 entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Terabyte para Gigabyte:"))
 valorConvertido = terabyte_para_gigabyte(entradaDotecladoValoraSerConvertido)
 print("Valor Convertido:", valorConvertido)
+
+def terabyte_para_petabyte(valorASerConvertido):
+    TBparaPB= valorASerConvertido / (CONSTANTE_PRINCIPAL)
+    return TBparaPB
+
+def petabyte_para_terabyte(valorASerConvertido):
+    PBparaTB = valorASerConvertido * (CONSTANTE_PRINCIPAL)
+    return PBparaTB
+
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Terabyte para Petabyte:"))
+valorConvertido = terabyte_para_petabyte (entradaDotecladoValoraSerConvertido)
+print("Valor Convertido:", valorConvertido)
+
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Petabyte para Terabyte:"))
+valorConvertido = petabyte_para_terabyte(entradaDotecladoValoraSerConvertido)
+print("Valor Convertido:", valorConvertido)
