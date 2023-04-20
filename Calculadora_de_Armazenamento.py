@@ -32,4 +32,19 @@ entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser converti
 valorConvertido = kilobyte_para_byte(entradaDotecladoValoraSerConvertido)
 print("Valor Convertido:", valorConvertido)
 
+def kilobyte_para_megabyte(valorASerConvertido):
+    KbyteParaMbyte = valorASerConvertido / (CONSTANTE_PRINCIPAL)
+    return KbyteParaMbyte
+
+def megabyte_para_kilobyte(valorASerConvertido):
+    MBparaKB = valorASerConvertido * (CONSTANTE_PRINCIPAL)
+    return MBparaKB
+
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Kilobyte para Megabyte:"))
+valorConvertido = kilobyte_para_megabyte (entradaDotecladoValoraSerConvertido)
+print("Valor Convertido:", valorConvertido)
+
+entradaDotecladoValoraSerConvertido = float(input("Insira o valor a ser convertido de Megabyte para Kilobyte:"))
+valorConvertido = megabyte_para_kilobyte (entradaDotecladoValoraSerConvertido)
+print("Valor Convertido:", valorConvertido)
 
