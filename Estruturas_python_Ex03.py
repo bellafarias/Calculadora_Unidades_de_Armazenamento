@@ -19,13 +19,23 @@ else:
 
 unidades_para_converter = int(input("Insira um valor à ser convertido:"))
 
-def dadinhos_convert():
-    if origem_marota < destino_maroto:
-        tamanho = destino_maroto - origem_marota
-        resultado = unidades_para_converter / (PRINCIPAL**tamanho)
+def dadinhos():
+    if medidas_iniciais == "bit" and medidas_final != "bit":
+        tamanho = destino_maroto - medidas_armazenamento.index("byte")
+        converter_um = unidades_para_converter/ VALOR_BYTE_BIT
+        resultado = converter_um / (PRINCIPAL**tamanho)
+    elif medidas_final == "bit" and medidas_iniciais != "bit":
+        tamanho = origem_marota - medidas_armazenamento.index("byte")
+        converter_um = unidades_para_converter * (PRINCIPAL**tamanho)
+        resultado = converter_um * VALOR_BYTE_BIT
+    elif medidas_final == "bit" and medidas_final != "bit":
+        resultado = unidades_para_converter
     else:
-        tamanho = destino_maroto - origem_marota
-        resultado = unidades_para_converter * (PRINCIPAL**tamanho)
-    print ("Seu resultado é:", resultado, str(medidas_final))
-
-dadinhos_convert()
+        if origem_marota >= destino_maroto:
+            tamanho = origem_marota - destino_maroto
+            resultado = unidades_para_converter / (PRINCIPAL**tamanho)
+        elif origem_marota < destino_maroto:
+            tamanho = destino_maroto - origem_marota
+            resultado = unidades_para_converter * (PRINCIPAL**tamanho)
+    print ("Seu resultado é:", resultado, medidas_final)
+    dadinhos()
